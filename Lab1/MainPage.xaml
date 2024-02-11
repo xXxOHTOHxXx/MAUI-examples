@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab1.MainPage">
+
+    <Grid
+    Padding="5,0"
+    ColumnSpacing="1"
+    RowSpacing="1">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Label
+            x:Name="display"
+            Grid.Row="0"
+            Grid.ColumnSpan="12"
+            Padding="30"
+            BackgroundColor="White"
+            FontAttributes="Bold"
+            FontSize="48"
+            HorizontalTextAlignment="End"
+            LineBreakMode="NoWrap"
+            Text="0"
+            TextColor="Black"
+            VerticalTextAlignment="Center" />
+
+        <Button
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            BackgroundColor="LightGrey"
+            Clicked="OnMfuncClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="MC" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            BackgroundColor="LightGrey"
+            Clicked="OnMfuncClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="MR"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="4"
+            Grid.ColumnSpan="2"
+            BackgroundColor="LightGrey"
+            Clicked="OnMfuncClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="M+"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="6"
+            Grid.ColumnSpan="2"
+            BackgroundColor="LightGrey"
+            Clicked="OnMfuncClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="M-"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="8"
+            Grid.ColumnSpan="2"
+            BackgroundColor="LightGrey"
+            Clicked="OnMfuncClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="MS"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="1"
+            Grid.Column="10"
+            Grid.ColumnSpan="2"
+            BackgroundColor="LightGrey"
+            Clicked="OnMfuncClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="MV"
+            TextColor="DarkGrey" />
+
+        <Button
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            BackgroundColor="LightGrey"
+            Clicked="BinaryOperations"
+            CornerRadius="0"
+            FontSize="36"
+            Text="%" />
+        <Button
+            Grid.Row="2"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="LightGrey"
+            Clicked="ceClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="CE"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="2"
+            Grid.Column="6"
+            Grid.ColumnSpan="3"
+            BackgroundColor="LightGrey"
+            Clicked="cClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="C"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="2"
+            Grid.Column="9"
+            Grid.ColumnSpan="3"
+            BackgroundColor="LightGrey"
+            Clicked="eraseClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="⌫"
+            TextColor="DarkGrey" />
+
+        <Button
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="powneg1Clicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="1/x"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="pow2Clicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="x^2"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="6"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="SqrtClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="sqrt"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="3"
+            Grid.Column="9"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="BinaryOperations"
+            CornerRadius="0"
+            FontSize="36"
+            Text="/"
+            TextColor="DarkGrey" />
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="DigitClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="7"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="DigitClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="8"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="6"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="DigitClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="9"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="4"
+            Grid.Column="9"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="BinaryOperations"
+            CornerRadius="0"
+            FontSize="36"
+            Text="*"
+            TextColor="DarkGrey" />
+
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="DigitClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="4"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="5"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="DigitClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="5"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="5"
+            Grid.Column="6"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="DigitClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="6"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="5"
+            Grid.Column="9"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="BinaryOperations"
+            CornerRadius="0"
+            FontSize="36"
+            Text="-"
+            TextColor="DarkGrey" />
+
+
+        <Button
+            Grid.Row="6"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="DigitClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="1"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="6"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="DigitClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="2"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="6"
+            Grid.Column="6"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="DigitClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="3"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="6"
+            Grid.Column="9"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="BinaryOperations"
+            CornerRadius="0"
+            FontSize="36"
+            Text="+"
+            TextColor="DarkGrey" />
+
+        <Button
+            Grid.Row="7"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="signSwap"
+            CornerRadius="0"
+            FontSize="36"
+            Text="+/-"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="7"
+            Grid.Column="3"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="DigitClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="0"
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="7"
+            Grid.Column="6"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="dotClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text=","
+            TextColor="DarkGrey" />
+        <Button
+            Grid.Row="7"
+            Grid.Column="9"
+            Grid.ColumnSpan="3"
+            BackgroundColor="White"
+            Clicked="equalClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="="
+            TextColor="DarkGrey" />
+
+        <Button
+            Grid.Row="8"
+            Grid.Column="0"
+            Grid.ColumnSpan="12"
+            BackgroundColor="White"
+            Clicked="circleAreaClicked"
+            CornerRadius="0"
+            FontSize="36"
+            Text="circle area"
+            TextColor="DarkGrey" />
+
+
+
+    </Grid>
+
+
+</ContentPage>

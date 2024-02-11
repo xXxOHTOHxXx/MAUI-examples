@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab1.lab3page"
+             Title="lab3page">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            x:Name="MainStackLayout">
+            <Label x:Name="header" Text="Выберите автора" FontSize="18" />
+            <Picker x:Name="DBPicker" Title = "Авторы и книги"
+                SelectedIndexChanged="PickerSelectedIndexChanged">
+                <Picker.Items>
+                </Picker.Items>
+            </Picker>
+            <VerticalStackLayout x:Name= "ContentStackLayout">
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
