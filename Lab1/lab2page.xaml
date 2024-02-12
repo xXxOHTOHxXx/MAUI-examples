@@ -4,17 +4,19 @@
              x:Class="Lab1.lab2page"
              Title="Lab 2"
              BackgroundColor="White">
-
-        <Grid VerticalOptions="FillAndExpand">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
+    <Grid VerticalOptions="FillAndExpand"
+          RowDefinitions="Auto,*,Auto"
+          ColumnDefinitions="*,*">
+       <!-- <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
+        -->
         <Label
             x:Name="pgLabel"     
             Text="Lab 2 task"
@@ -26,6 +28,8 @@
         <ProgressBar 
             x:Name="progBar"
             ProgressColor="SeaGreen"
+            VerticalOptions="Center"
+            Margin="10"
             Grid.Row="1"
             Grid.ColumnSpan="1"/>
         <Label 
@@ -33,23 +37,32 @@
             Grid.Row="1"
             Grid.Column="1"
             Grid.ColumnSpan="1"
+            VerticalOptions="Center"
             TextColor="Black"
             Text="0%"/>
-        <Button
-            x:Name="StartBtn"
-            Text="Start"
-            Grid.Row="2"
-            SemanticProperties.Hint="start sin approximation"
-            Clicked="StartClicked"
-            HorizontalOptions="Fill" />
-        <Button
-            x:Name="CancelBtn"
-            Text="Cancel"
-            Grid.Column="1"
-            Grid.Row="2"
-            SemanticProperties.Hint="cancel sin approximation"
-            Clicked="CancelClicked"
-            HorizontalOptions="Fill" />
-        </Grid>
+       
+
+            <Button
+                x:Name="StartBtn"
+                Text="Start"
+                Grid.Row="2"
+                Grid.Column="0"
+                SemanticProperties.Hint="start sin approximation"
+                Clicked="StartClicked"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="CancelBtn"
+                Text="Cancel"
+                Grid.Row="2"
+                Grid.Column="1"
+                SemanticProperties.Hint="cancel sin approximation"
+                Clicked="CancelClicked"
+                HorizontalOptions="Fill" />
+
+    </Grid>
+
+
+
+
 
 </ContentPage>

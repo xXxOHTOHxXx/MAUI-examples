@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Android.Provider.Telephony.Mms;
+using NbrbAPI.Models;
 
 namespace Lab1.Services
 {
-    internal interface IRateService
+    public interface IRateService
     {
-        IEnumerable<Rate> GetRates(DateTime date);
+        public Task<IEnumerable<Rate>> GetRates(DateTime date);
     }
 }

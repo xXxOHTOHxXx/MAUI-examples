@@ -4,7 +4,6 @@
              x:Class="Lab1.MainPage">
 
     <Grid
-    Padding="5,0"
     ColumnSpacing="1"
     RowSpacing="1">
 
@@ -57,7 +56,6 @@
             BackgroundColor="LightGrey"
             Clicked="OnMfuncClicked"
             CornerRadius="0"
-            FontSize="36"
             Text="MC" />
         <Button
             Grid.Row="1"
@@ -66,7 +64,6 @@
             BackgroundColor="LightGrey"
             Clicked="OnMfuncClicked"
             CornerRadius="0"
-            FontSize="36"
             Text="MR"
             TextColor="DarkGrey" />
         <Button
@@ -76,7 +73,6 @@
             BackgroundColor="LightGrey"
             Clicked="OnMfuncClicked"
             CornerRadius="0"
-            FontSize="36"
             Text="M+"
             TextColor="DarkGrey" />
         <Button
@@ -86,7 +82,6 @@
             BackgroundColor="LightGrey"
             Clicked="OnMfuncClicked"
             CornerRadius="0"
-            FontSize="36"
             Text="M-"
             TextColor="DarkGrey" />
         <Button
@@ -96,7 +91,6 @@
             BackgroundColor="LightGrey"
             Clicked="OnMfuncClicked"
             CornerRadius="0"
-            FontSize="36"
             Text="MS"
             TextColor="DarkGrey" />
         <Button
@@ -106,7 +100,6 @@
             BackgroundColor="LightGrey"
             Clicked="OnMfuncClicked"
             CornerRadius="0"
-            FontSize="36"
             Text="MV"
             TextColor="DarkGrey" />
 
@@ -177,7 +170,6 @@
             BackgroundColor="White"
             Clicked="SqrtClicked"
             CornerRadius="0"
-            FontSize="36"
             Text="sqrt"
             TextColor="DarkGrey" />
         <Button

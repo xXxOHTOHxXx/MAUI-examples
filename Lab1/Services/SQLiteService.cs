@@ -23,21 +23,11 @@ namespace Lab3.Services
         }
         public void Init()
         {
-            try
-            {
-                 database = new SQLiteConnection(Path.Combine(
-                Environment.GetFolderPath(Environment.SpecialFolder.Personal),
-                "lab3db.db3"));
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-
-            if(!(File.Exists(Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.Personal),
+            if(!(File.Exists(Path.Combine(FileSystem.AppDataDirectory,
             "lab3db.db3"))))
             {
+                database = new SQLiteConnection(Path.Combine(FileSystem.AppDataDirectory,"lab3db.db3"));
+
                 database.CreateTable<Author>();
                 database.CreateTable<Book>();
 
@@ -56,6 +46,10 @@ namespace Lab3.Services
                     database.Insert(book1);
                     database.Insert(book2);
                 }
+            }
+            else
+            {
+                database = new SQLiteConnection(Path.Combine(FileSystem.AppDataDirectory,"lab3db.db3"));
             }
         }
     }

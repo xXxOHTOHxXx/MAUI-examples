@@ -18,5 +18,9 @@
         Title="Lab3"
         ContentTemplate="{DataTemplate local:lab3page}"
         Route="lab3page" />
+    <ShellContent
+        Title="Lab4"
+        ContentTemplate="{DataTemplate local:lab4page}"
+        Route="lab4page" />
 
 </Shell>

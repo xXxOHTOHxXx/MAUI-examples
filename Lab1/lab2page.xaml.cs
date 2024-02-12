@@ -55,6 +55,7 @@ public partial class lab2page : ContentPage
 
 
         await Task.Run(async () =>
+
         {
             for (double i = start; i < end; i += step)
             {
@@ -71,7 +72,7 @@ public partial class lab2page : ContentPage
                 await MainThread.InvokeOnMainThreadAsync(() =>
                 {
                     this.progBar.Progress = i / end;
-                    this.ProgNum.Text = (i / end * 100).ToString() + "%";
+                    this.ProgNum.Text = ((int)(i / end * 100)).ToString() + "%";
                 });
                 result += Math.Sin(i) * step;
 
