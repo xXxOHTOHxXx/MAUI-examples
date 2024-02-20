@@ -13,43 +13,32 @@
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition />
+                <RowDefinition />
             </Grid.RowDefinitions>
 
 
-            <Entry  x:Name="Entry1" Grid.Row="0" Grid.Column="0" Keyboard="Numeric" >
+            <Entry  x:Name="Entry1" Grid.Row="0" Grid.Column="0" Keyboard="Numeric" TextChanged="OnEntry1TextChanged" MaxLength="9">
                 <Entry.Behaviors>
 
                 </Entry.Behaviors>
             </Entry>
-            <Entry  x:Name="Entry2" Grid.Row="1" Grid.Column="0" Keyboard="Numeric" >
+            <Entry  x:Name="Entry2" Grid.Row="1" Grid.Column="0" Keyboard="Numeric" TextChanged="OnEntry2TextChanged" MaxLength="9">
                 <Entry.Behaviors>
                 </Entry.Behaviors>
             </Entry>
 
 
-            <Picker x:Name="Currency1" Title="Выберите валюту"
-                    SelectedIndexChanged="Picker1SelectedIndexChanged"
-                    Grid.Column="1"
-                    Grid.Row="0">
-                <Picker.Items>
-                    <x:String>Российский рубль</x:String>
-                    <x:String>Евро</x:String>
-                    <x:String>Доллар США</x:String>
-                    <x:String>Швейцарский франк</x:String>
-                    <x:String>Китайский юань</x:String>
-                    <x:String>Фунт стерлингов</x:String>
-                </Picker.Items>
-            </Picker>
+            <Label Text="Белорусский рубль" Grid.Row="0" Grid.Column="1"/>
             <Picker x:Name="Currency2" Title="Выберите валюту"
-                    SelectedIndexChanged="Picker1SelectedIndexChanged"
+                    SelectedIndexChanged="Picker2SelectedIndexChanged"
                     Grid.Column="1"
                     Grid.Row="1">
                 <Picker.Items>
-                    <x:String>Российский рубль</x:String>
+                    <x:String>Российских рублей</x:String>
                     <x:String>Евро</x:String>
                     <x:String>Доллар США</x:String>
                     <x:String>Швейцарский франк</x:String>
-                    <x:String>Китайский юань</x:String>
+                    <x:String>Китайских юаней</x:String>
                     <x:String>Фунт стерлингов</x:String>
                 </Picker.Items>
             </Picker>
@@ -58,6 +47,10 @@
             <DatePicker x:Name ="DatePicker" Format="d" DateSelected="DateSelected" Grid.Column="2" Grid.RowSpan="2">
                 <DatePicker.MinimumDate>1/1/2015</DatePicker.MinimumDate>
             </DatePicker>
+
+            <Button x:Name="ConvertButton" Text="Convert" Clicked="OnConvertClicked"
+                    Grid.Row="2" Grid.Column="0"/>
+
         </Grid>
     </VerticalStackLayout>
 </ContentPage>
